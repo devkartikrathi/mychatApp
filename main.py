@@ -171,3 +171,13 @@ if button or st.session_state.get("submit"):
 
         except OpenAIError as e:
             st.error(e._message)
+
+
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
